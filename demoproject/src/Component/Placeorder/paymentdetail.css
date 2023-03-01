@@ -1,0 +1,13 @@
+.payment-option{
+    display: flex;
+    column-gap: 25px;
+}
+.payment-option .f-group{
+    display: flex;
+    align-items: baseline;
+    column-gap: 3px;
+}
+.pyment-method{
+    width: 100%;
+    max-width: 400px;
+}

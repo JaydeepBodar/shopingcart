@@ -1,0 +1,23 @@
+.newuser{
+    text-align: center;
+    padding: 20px 0;
+}
+.newuser a{
+    text-decoration: none;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group input{
+    width: 100%;
+    padding: 8px 15px;
+    background-color: #f2f2f2;
+    border: 1px solid #808088;
+    border-radius: 10px;
+    outline :none;
+    margin: 8px 0;
+}
+.submit-btn{
+    padding-top: 12px;
+}
