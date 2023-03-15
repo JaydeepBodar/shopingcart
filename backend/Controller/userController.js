@@ -42,7 +42,7 @@ const login = async (req, res) => {
     // } else {
       const user = await Signupschema.findOne({ email: email });
       console.log(user)
-      if(!!user){
+      if(user){
         const ispassword = await bcrypt.compare(password, user.password);
       if (!ispassword) {
         res.status(405).json({ message: "worng password try again" });

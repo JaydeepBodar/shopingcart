@@ -24,9 +24,9 @@ const Allproduct = () => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:4100/products")
+      .get("http://localhost:4100/product")
       .then((response) => {
-        let newdata = response.data.products;
+        let newdata = response.data;
         let categorydata
         if (category) {
           categorydata = newdata.filter((p) => p.category === category);

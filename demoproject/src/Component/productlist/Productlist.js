@@ -31,7 +31,7 @@ const Productlist = () => {
   const {id} = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:4100/products/${id}`)
+      .get(`http://localhost:4100/product/${id}`)
       .then((resolve) => {
         console.log("fsfsfs", resolve.data);
         setproduct(resolve.data);
