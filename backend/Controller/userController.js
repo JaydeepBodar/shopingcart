@@ -1,6 +1,7 @@
 const Signupschema = require("../Model/userSignupschema");
 const bcrypt = require("bcrypt");
-const secreatkey = "secreat";
+const dotenv=require('dotenv')
+const secreatkey = process.env.secretkey;
 const jsonwebtoken = require("jsonwebtoken");
 const signup = async (req, res) => {
   const { firstname, lastname, mobilenumber, email, password } = req.body;
@@ -57,7 +58,7 @@ const login = async (req, res) => {
         res.json(user).send({message:'log in sucsessfully'});
       }
       }else{
-        res.status(401).json({ message: "user not found" });
+        res.status(401).json({ message: "Invalid login details" });
       }
       
     // }

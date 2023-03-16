@@ -11,7 +11,8 @@ const getallproduct=async(req,res)=>{
 const getindividualproduct=async(req,res)=>{
     try{
         const findindividual=await products.findOne({id:req.params.id});
-        res.json(findindividual)
+        console.log(findindividual)
+        res.status(200).json(findindividual)
     }
     catch(err){
         res.json({message:'error shown'})
