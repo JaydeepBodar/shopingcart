@@ -26,7 +26,11 @@ function App() {
     { path: "signup", element: <Signup /> },
     { path: "placehorder", element: <Placeorder /> },
   ]);
-  return <RouterProvider router={routes}></RouterProvider>;
+  return (
+    <>
+      <RouterProvider router={routes}></RouterProvider>
+    </>
+  );
 }
 
 export default App;

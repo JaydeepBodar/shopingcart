@@ -4,11 +4,13 @@ import Navigation from "./Navigation";
 import Topnav from "./Topnav";
 const Mainnavigation = () => {
   return (
-    <header>
-      <Topnav />
-      <Navigation />
+    <div className="main-wrapper">
+      <header>
+        <Topnav />
+        <Navigation />
+      </header>
       <Outlet />
-    </header>
+    </div>
   );
 };
 

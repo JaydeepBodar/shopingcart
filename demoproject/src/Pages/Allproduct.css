@@ -12,19 +12,19 @@
     border-radius: 20px 20px 0 0 ;
     transform: scale(1.1);
 }
-.site-wrapper{
+.product-section{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
     padding-top: 25px;
 }
 .card-box{
     overflow: hidden;
     flex: 0 0 30%;
-    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f2f2f2;
     border-radius: 20px;
     z-index: 0;

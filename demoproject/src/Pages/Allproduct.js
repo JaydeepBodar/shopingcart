@@ -56,12 +56,12 @@ const Allproduct = () => {
     datasearch(searchdata)
   }
   return (
-    <div className="main-wrapper">
+    <div className="site-wrapper">
       {loading && <p style={inline}>Loading...</p>}
       {error && <p style={inline}>Failed to fetch</p>}
       {!loading && !error && <div className="search-field"><SearchIcon className="searchicon"/><TextField className="input-field" type='text' onChange={filterhandle} value={search} placeholder='Search Product...' /></div>} 
       {searchdata && filterdata.length === 0 && <p>No product Found</p>}
-      <div className="site-wrapper">
+      <section className="product-section">
         {!loading &&
           !error &&
           product.map((value) => {
@@ -118,7 +118,7 @@ const Allproduct = () => {
               </div>
             );
           })}
-      </div>
+      </section>
     </div>
   );
 };
