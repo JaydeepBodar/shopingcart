@@ -5,7 +5,7 @@ const authmiddle=(req,res,next)=>{
         req.user=decode;
         next()
     }catch(err){
-        console.log('unauthorized')
+        res.json({message:"unauthorized user"})
     }
 }
 module.exports=authmiddle
