@@ -19,7 +19,6 @@ const Allproduct = () => {
   const [loading, setloading] = useState(true);
   const [error, seterror] = useState(true);
   const sortoption = [
-    { label: "filter-product", value: "default", code: 0 },
     { label: "Price, low to high", value: "price-accending", code: 1 },
     { label: "Price, high to low", value: "price-decending", code: 2 },
     { label: "Alphabetically, A-Z", value: "alphabetic-accending", code: 3 },
@@ -79,8 +78,6 @@ const Allproduct = () => {
       return a.title.localeCompare(b.title);
     } else if (sortOption === "alphabetic-decending") {
       return b.title.localeCompare(a.title);
-    } else if (sortOption === "default") {
-      return b; // default case, no sorting}
     }
   });
   return (
