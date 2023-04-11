@@ -53,9 +53,14 @@
   }
   .search-field{
     position: relative;
+  }
+  .filter-data{
     width: 100%;
-    max-width: 200px;
-    margin: 20px auto 0;
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .searchicon{
     position: absolute;
@@ -70,6 +75,16 @@
 .input-field .Mui-focused:focus{
   outline: none;
 } 
+.dropdown{
+  font-size: 17px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  outline: none;
+  border-radius: 15px;
+}
+.dropdown .option-val{
+  padding: 3px 5px;
+}
   @media screen and (max-width:768px) {
     .card-box{
         flex: 0 0 45%;

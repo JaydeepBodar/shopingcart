@@ -4,7 +4,7 @@ const getallproduct=async(req,res)=>{
         const newproduct=await products.find();
         res.json(newproduct)   
     }catch(err){
-        res.json({message:'error shown'})
+        res.status(401).json({message:'error shown'})
     }
 
 }
@@ -15,7 +15,7 @@ const getindividualproduct=async(req,res)=>{
         res.status(200).json(findindividual)
     }
     catch(err){
-        res.json({message:'error shown'})
+        res.status(401).json({message:'error shown'})
     }
 }
 module.exports={getallproduct,getindividualproduct}

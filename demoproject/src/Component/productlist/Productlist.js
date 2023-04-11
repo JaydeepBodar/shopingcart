@@ -1,4 +1,4 @@
-import axios from "axios";
+		import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -11,7 +11,7 @@ const Productlist = () => {
   const [loading, setloading] = useState(true);
   const [product, setproduct] = useState([]);
   const [error, seterror] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate();	
   const dispatch = useDispatch();
   const options = {
     items: 2,

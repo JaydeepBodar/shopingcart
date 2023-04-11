@@ -3,8 +3,10 @@ const addtocart=(req,res)=>{
     Cartsschema.findOne({user:req.user.id}).exec((err,cart)=>{
         if(err) res.json({message:'ubable to add item'})
         if(cart){
-            const product=req.body.cartItems.product
+            const product=req.body.cartItems[0]
+            console.log(product)
             const item=cart.cartItems.find(pro=>pro.product === product)
+            console.log(item)
             if(item){
                 Cartsschema.findOneAndUpdate({'user':req.user.id,"cartItems.product":product},{
                     "$set":{
@@ -16,6 +18,17 @@ const addtocart=(req,res)=>{
                     }
                 }).exec((err,_cart)=>{
                     if(err) res.json({message:'unauthorized'})
+                    else{
+                        req.json({cart:_cart})
+                    }
+                })
+            }else{
+                Cartsschema.findOneAndUpdate({user:req.user.id},{
+                    '$push':{
+                        'cartItems':req.body.cartItems,
+                    }
+                }).exec((err,_cart)=>{
+                    if(err) res.json({message:'unable to add item'})
                     else{
                         req.json({cart:_cart})
                     }

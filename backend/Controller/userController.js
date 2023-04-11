@@ -1,6 +1,6 @@
 const Signupschema = require("../Model/userSignupschema");
 const bcrypt = require("bcrypt");
-const dotenv=require('dotenv')
+const dotenv = require("dotenv");
 const secreatkey = process.env.secretkey;
 const jsonwebtoken = require("jsonwebtoken");
 const signup = async (req, res) => {
@@ -28,7 +28,6 @@ const signup = async (req, res) => {
       { email: result.email, id: result._id },
       secreatkey
     );
-    console.log('asfafafae',jsontoken)
     res.json({ user: result, token: jsontoken });
     console.log(result);
   } catch (error) {
@@ -41,26 +40,27 @@ const login = async (req, res) => {
     // if (!(email && password)) {
     //   res.status(401).json().send({ message: "invalid userlogin" });
     // } else {
-      const user = await Signupschema.findOne({ email: email });
-      console.log(user)
-      if(user){
-        const ispassword = await bcrypt.compare(password, user.password);
+    const user = await Signupschema.findOne({ email: email });
+    console.log(user);
+    if (user) {
+      const ispassword = await bcrypt.compare(password, user.password);
       if (!ispassword) {
         res.status(405).json({ message: "worng password try again" });
       }
       if (user && ispassword) {
         const token = jsonwebtoken.sign(
-          { id: user._id, email: user.email },secreatkey,
+          { id: user._id, email: user.email },
+          secreatkey,
           { expiresIn: "2h" }
         );
         user.token = token;
-        console.log('efefeff', user)
-        res.json(user).send({message:'log in sucsessfully'});
+        console.log("efefeff", user);
+        res.json(user).send({ message: "log in sucsessfully" });
       }
-      }else{
-        res.status(401).json({ message: "Invalid login details" });
-      }
-      
+    } else {
+      res.status(401).json({ message: "Invalid login details" });
+    }
+
     // }
   } catch (err) {
     // res.status(401).json({ message: "invalid userlogin" });
