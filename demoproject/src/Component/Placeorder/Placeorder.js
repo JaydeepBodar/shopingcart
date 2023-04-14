@@ -75,22 +75,22 @@ const Placeorder = () => {
           .required("city name is require")
           .matches(/^[a-z]+$/, "Only alphabetic characters allowed"),
       }),
-      Addressinfo: yup.object({
-        newaddress: yup.string().required("billing address is require"),
-        newpostalcode: yup
-          .string()
-          .required("billing postalcode is require")
-          .min(6)
-          .max(6, "postal code exact 6 number "),
-        newstate: yup
-          .string()
-          .required("billing state is require")
-          .matches(/^[a-z]+$/, "Only alphabetic characters allowed"),
-        newcity: yup
-          .string()
-          .required("billing city is require")
-          .matches(/^[a-z]+$/, "Only alphabetic characters allowed"),
-      }),
+      // Addressinfo: yup.object({
+      //   newaddress: yup.string().required("billing address is require"),
+      //   newpostalcode: yup
+      //     .string()
+      //     .required("billing postalcode is require")
+      //     .min(6)
+      //     .max(6, "postal code exact 6 number "),
+      //   newstate: yup
+      //     .string()
+      //     .required("billing state is require")
+      //     .matches(/^[a-z]+$/, "Only alphabetic characters allowed"),
+      //   newcity: yup
+      //     .string()
+      //     .required("billing city is require")
+      //     .matches(/^[a-z]+$/, "Only alphabetic characters allowed"),
+      // }),
     }),
     onSubmit: (values, action) => {
       console.log(values);
