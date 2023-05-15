@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Inputdata from "../User/Inputdata";
-const Addressinfo = ({formiks}) => {
+const Addressinfo = ({ formiks2, formiks1 }) => {
   const [check, setcheck] = useState(false);
   return (
     <div className="addressinfo">
@@ -17,15 +17,15 @@ const Addressinfo = ({formiks}) => {
           <Inputdata
             label="Address :-"
             type="text"
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
-            name="Addressinfo.newaddress"
+            onChange={check ? formiks1.handleChange : formiks2.handleChange}
+            onBlur={formiks2.handleBlur}
+            name="newaddress"
             placeholder="Enter Address..."
-            value={check ? formiks.values.Contactinfo.address : formiks.values.Addressinfo.newaddress}
+            value={check ? formiks1.values.address : formiks2.values.newaddress}
           />
           {!check ? (
-            formiks.errors.Addressinfo && formiks.touched.Addressinfo ? (
-              <p style={{ color: "red" }}>{formiks.errors.Addressinfo.newaddress}</p>
+            formiks2.errors && formiks2.touched ? (
+              <p style={{ color: "red" }}>{formiks2.errors.newaddress}</p>
             ) : (
               ""
             )
@@ -37,15 +37,17 @@ const Addressinfo = ({formiks}) => {
           <Inputdata
             label="Postalcode :-"
             type="number"
-            name="Addressinfo.newpostalcode"
+            name="newpostalcode"
             placeholder="Enter Postalcode..."
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
-            value={check ? formiks.values.Contactinfo.postalcode : formiks.values.Addressinfo.newpostalcode}
+            onChange={check ? formiks1.handleChange : formiks2.handleChange}
+            onBlur={formiks2.handleBlur}
+            value={
+              check ? formiks1.values.postalcode : formiks2.values.newpostalcode
+            }
           />
           {!check ? (
-            formiks.errors.Addressinfo && formiks.touched.Addressinfo ? (
-              <p style={{ color: "red" }}>{formiks.errors.Addressinfo.newpostalcode}</p>
+            formiks2.errors && formiks2.touched ? (
+              <p style={{ color: "red" }}>{formiks2.errors.newpostalcode}</p>
             ) : (
               ""
             )
@@ -57,15 +59,15 @@ const Addressinfo = ({formiks}) => {
           <Inputdata
             label="City :-"
             type="text"
-            name="Addressinfo.newcity"
+            name="newcity"
             placeholder="Enter Cityname..."
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
-            value={check ? formiks.values.Contactinfo.city : formiks.values.Addressinfo.newcity}
+            onChange={check ? formiks1.handleChange : formiks2.handleChange}
+            onBlur={formiks2.handleBlur}
+            value={check ? formiks1.values.city : formiks2.values.newcity}
           />
           {!check ? (
-            formiks.errors.Addressinfo && formiks.touched.Addressinfo ? (
-              <p style={{ color: "red" }}>{formiks.errors.Addressinfo.newcity}</p>
+            formiks2.errors && formiks2.touched ? (
+              <p style={{ color: "red" }}>{formiks2.errors.newcity}</p>
             ) : (
               ""
             )
@@ -76,16 +78,16 @@ const Addressinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="State :-"
-            name="Addressinfo.newstate"
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="newstate"
+            onChange={check ? formiks1.handleChange : formiks2.handleChange}
+            onBlur={formiks2.handleBlur}
             type="text"
             placeholder="Enter statename"
-            value={check ? formiks.values.Contactinfo.state : formiks.values.Addressinfo.newstate}
+            value={check ? formiks1.values.state : formiks2.values.newstate}
           />
           {!check ? (
-            formiks.errors.Addressinfo && formiks.touched.Addressinfo ? (
-              <p style={{ color: "red" }}>{formiks.errors.Addressinfo.newstate}</p>
+            formiks2.errors && formiks2.touched ? (
+              <p style={{ color: "red" }}>{formiks2.errors.newstate}</p>
             ) : (
               ""
             )

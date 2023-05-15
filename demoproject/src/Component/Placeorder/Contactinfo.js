@@ -1,6 +1,6 @@
 import React from "react";
 import Inputdata from "../User/Inputdata";
-const Contactinfo = ({formiks}) => {
+const Contactinfo = ({formiks1}) => {
   return (
     <div className="customer-info">
       <h3 style={{ borderBottom: "4px solid #808080" }}>Customer Info</h3>
@@ -8,15 +8,15 @@ const Contactinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="First name :-"
-            name="Contactinfo.firstname"
-            value={formiks.values.Contactinfo.firstname}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="firstname"
+            value={formiks1.values.firstname}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             type="text"
             placeholder="Enter Firstname..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red", margin: "0" }}>{formiks.errors.Contactinfo.firstname}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red", margin: "0" }}>{formiks1.errors.firstname}</p>
           ) : (
             ""
           )}
@@ -25,30 +25,30 @@ const Contactinfo = ({formiks}) => {
           <Inputdata
             label="Last name :-"
             type="text"
-            name="Contactinfo.lastname"
-            value={formiks.values.Contactinfo.lastname}
-            onChange={formiks.handleChange}
+            name="lastname"
+            value={formiks1.values.lastname}
+            onChange={formiks1.handleChange}
             placeholder="Enter Lastname..."
-            onBlur={formiks.handleBlur}
+            onBlur={formiks1.handleBlur}
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red" }}>{formiks.errors.Contactinfo.lastname}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red" }}>{formiks1.errors.lastname}</p>
           ) : (
             ""
           )}
         </div>
         <div className="form-group">
           <Inputdata
-            name="Contactinfo.email"
-            value={formiks.values.Contactinfo.email}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="email"
+            value={formiks1.values.email}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             label="Email :-"
             type="text"
             placeholder="Enter email..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red" }}>{formiks.errors.Contactinfo.email}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red" }}>{formiks1.errors.email}</p>
           ) : (
             ""
           )}
@@ -56,15 +56,15 @@ const Contactinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="Address :-"
-            name="Contactinfo.address"
-            value={formiks.values.Contactinfo.address}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="address"
+            value={formiks1.values.address}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             type="text"
             placeholder="Enter Address..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red", margin: "0" }}>{formiks.errors.Contactinfo.address}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red", margin: "0" }}>{formiks1.errors.address}</p>
           ) : (
             ""
           )}
@@ -72,15 +72,15 @@ const Contactinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="Contact Number :-"
-            name="Contactinfo.mobilenumber"
-            value={formiks.values.Contactinfo.mobilenumber}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="mobilenumber"
+            value={formiks1.values.mobilenumber}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             type="number"
             placeholder="Enter Contactnumber..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red" }}>{formiks.errors.Contactinfo.mobilenumber}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red" }}>{formiks1.errors.mobilenumber}</p>
           ) : (
             ""
           )}
@@ -88,15 +88,15 @@ const Contactinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="Postalcode :-"
-            name="Contactinfo.postalcode"
-            value={formiks.values.Contactinfo.postalcode}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="postalcode"
+            value={formiks1.values.postalcode}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             type="number"
             placeholder="Enter Postalcode..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red", margin: "0" }}>{formiks.errors.Contactinfo.postalcode}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red", margin: "0" }}>{formiks1.errors.postalcode}</p>
           ) : (
             ""
           )}
@@ -104,15 +104,15 @@ const Contactinfo = ({formiks}) => {
         <div className="form-group">
           <Inputdata
             label="City :-"
-            name="Contactinfo.city"
-            value={formiks.values.Contactinfo.city}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="city"
+            value={formiks1.values.city}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             type="text"
             placeholder="Enter Cityname..."
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red", margin: "0" }}>{formiks.errors.Contactinfo.city}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red", margin: "0" }}>{formiks1.errors.city}</p>
           ) : (
             ""
           )}
@@ -121,14 +121,14 @@ const Contactinfo = ({formiks}) => {
           <Inputdata
             label="State :-"
             type="text"
-            name="Contactinfo.state"
-            value={formiks.values.Contactinfo.state}
-            onChange={formiks.handleChange}
-            onBlur={formiks.handleBlur}
+            name="state"
+            value={formiks1.values.state}
+            onChange={formiks1.handleChange}
+            onBlur={formiks1.handleBlur}
             placeholder="Enter statename"
           />
-          {formiks.errors.Contactinfo && formiks.touched.Contactinfo ? (
-            <p style={{ color: "red", margin: "0" }}>{formiks.errors.Contactinfo.state}</p>
+          {formiks1.errors && formiks1.touched ? (
+            <p style={{ color: "red", margin: "0" }}>{formiks1.errors.state}</p>
           ) : (
             ""
           )}

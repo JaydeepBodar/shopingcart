@@ -18,7 +18,7 @@ const Allproduct = () => {
   const { category } = useParams();
   // console.log(category);
   const [loading, setloading] = useState(true);
-  const [error, seterror] = useState(true);
+  const [error, seterror] = useState(false);
   const sortoption = [
     { label: "Price, low to high", value: "price-accending", code: 1 },
     { label: "Price, high to low", value: "price-decending", code: 2 },
@@ -46,14 +46,12 @@ const Allproduct = () => {
           console.log(categorydata);
           setproduct(categorydata);
           setfilter(categorydata);
-          setsortdata(categorydata);
         } else {
           setproduct(newdata);
           setfilter(product);
-          setsortdata(product);
         }
       })
-      .catch((error) => seterror(false))
+      .catch((error) => seterror(true))
       .finally(() => setloading(false));
   }, [category, loading]);
   // filter data
