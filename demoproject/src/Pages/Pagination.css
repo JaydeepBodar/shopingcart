@@ -1,14 +1,16 @@
 ul.pagination {
+    width: 24%;
     position: relative;
     display: flex;
-    padding: 0;
+    margin: 25px auto;
     column-gap: 15px;
-    margin: 10px 0 30px;
+    /* margin: 10px 0 30px; */
+    justify-content: center;
 }
 ul.pagination::after{
     content: ">";
     position: absolute;
-    right: -30px;
+    right: 0px;
     font-size: 40px;
     font-weight: 900;
     bottom: -14px;
@@ -16,7 +18,7 @@ ul.pagination::after{
 ul.pagination::before{
     content: "<";
     position: absolute;
-    left: -30px;
+    left: 35px;
     font-size: 40px;
     font-weight: 900;
     bottom: -14px;

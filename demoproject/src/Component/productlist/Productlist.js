@@ -38,7 +38,7 @@ const Productlist = () => {
       })
       .catch((err) => seterror(true))
       .finally(() => setloading(false));
-  }, []);
+  }, [loading]);
   return (
     <React.Fragment>
       {loading && <p style={inline}>Loading...</p>}

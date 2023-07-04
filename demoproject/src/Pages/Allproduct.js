@@ -37,6 +37,7 @@ const Allproduct = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   let categorydata;
   useEffect(() => {
+    console.log("dataproduct")
     axios
       .get("http://localhost:4100/product")
       .then((response) => {
@@ -175,8 +176,9 @@ const Allproduct = () => {
               </div>
             );
           })}
-        <div className="paginate">
-          {!category && !searchdata && (
+      </section>
+      <div className="paginate">
+          {!searchdata && (
             <Pagination
               itemsPerPage={itemsPerPage}
               totalItems={sortdata.length}
@@ -185,7 +187,6 @@ const Allproduct = () => {
             />
           )}
         </div>
-      </section>
     </div>
   );
 };
